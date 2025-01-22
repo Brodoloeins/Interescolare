@@ -49,17 +49,22 @@
 
     <main id="main">
         <div class="center" style="flex-wrap: wrap;">
-            <?php
-            
-                $email = $_SESSION['email'];
-                $usuario = $_SESSION['usuario'];
+            <form action="" style="width:100%;">
+                <h1 style="margin: 30px 0 ;">Suas Informaçoes:</h1>
+                <?php
                 
-                echo "<p style='width: 100%;' class='userInfo'>Nome do usuário: ".$usuario."</p>";
-                echo "<p style='width: 100%;' class='userInfo'>Email: ".$email."</p>";
-            ?>
-            <a style="cursor: pointer; width: auto;" href="./deslogar.php"><button style="cursor: pointer;" class="login-input btn"> Deslogar </button></a>
-            <span> </span>
-            <a style="cursor: pointer; width: auto;" href="../esqueci.php"><button style="cursor: pointer;" class="login-input btn"> Trocar senha </button></a>
+                    $email = $_SESSION['email'];
+                    $usuario = $_SESSION['usuario'];
+                    
+                    echo "<input style='width: 100%;' class='login-input' value='".$usuario."'>";
+                    echo "<input style='width: 100%;' class='login-input' value='".$email."'>";
+                ?>
+                <input type="submit" style="cursor: pointer;" class="login-input btn" value="Atualizar informaçoes">
+            </form><br>
+            <div class="buttons" style="margin: 0 auto; width:100%;">
+                <a style="cursor: pointer; width: 100%;" href="../esqueci.php"><button style="cursor: pointer;" class="login-input btn"> Trocar senha </button></a>
+                <a style="cursor: pointer; width: 100%;" href="./deslogar.php"><button style="cursor: pointer;" class="login-input btn"> Deslogar </button></a>
+            </div>
         </div>
     </main>
 

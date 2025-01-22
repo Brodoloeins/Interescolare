@@ -18,7 +18,7 @@
 
     if($row == 1){
         while($linha = mysqli_fetch_assoc($result)){
-            $_SESSION['id'] = $linha["id"];
+            $_SESSION['id'] = $linha["email"];
             $_SESSION['usuario'] = $linha["nome"];
         }
         $_SESSION['email'] = $usuario;

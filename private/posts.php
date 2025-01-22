@@ -40,7 +40,7 @@
     </header>
     <section class="subject">
         <div class="w33"></div>
-        <form action="postsC.php" method="post" class="form-subject">
+        <form action="postsC.php" method="post" class="form-login">
             <select required class="login-input" name="subject">
                 <option selected="true" disabled="disabled">Selecione a matéria desejada</option>
                 <?php

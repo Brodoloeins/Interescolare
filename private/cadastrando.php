@@ -26,10 +26,8 @@
     move_uploaded_file($img['tmp_name'], "upload/".$nome); 
 
     if(mysqli_query($conexao, $query)){
-        print_r("<script>alert(\"Postagem cadastrada com sucesso\")</script>");
         header("Location:./posts.php");
     }else{
-        print_r("<script>(\"Não Foi possível cadastrar a postagem\")</script>");
         header("Location:./posts.php");
     }
     mysqli_close($conexao);

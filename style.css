@@ -1,0 +1,550 @@
+/* Variáveis */
+:root{
+    --cor: #232425;/*#345, #234, #243*/
+    --text-color: #fff;
+    --font-text-size: 17px;
+    --font-title-size: 30px;
+    --font-family: "Ubuntu", serif;
+    --main-bg: rgb(245, 233, 233);
+}
+
+/* Reset no documento */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    outline: none;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: gray;        
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #232425;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 2px solid gray;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* Classes padrões */
+
+.center{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.centro{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.both{
+    clear: both;
+}
+
+.w33{
+    width: 31.5%;
+}
+
+.w50{
+    width: 47.5%;
+}
+
+.w100{
+    width: 100%;
+}
+
+.top40{
+    margin-top: 40px;
+}
+
+.bt20{
+    margin-bottom: 20px;
+}
+
+/* Inicio do Boot */
+
+/* Navbar */
+.navbar,
+.navbar.hover{
+    width: 100%!important;
+    height: 80px!important;
+    background-color: var(--cor)!important;
+    display: flex!important;
+    align-items: center!important;
+}
+
+/* Right */
+
+.right{
+    display: flex!important;
+    width: 45%!important;
+}
+
+.right li{
+    float: right!important;
+    list-style: none!important;
+    padding: 0 20px!important;
+}
+
+.right a{
+    float: right!important;
+    text-decoration: none!important;
+    color: var(--text-color)!important;
+    font-size: var(--font-text-size)!important;
+    border-bottom: 2px solid var(--cor)!important;
+    cursor: pointer!important;
+}
+
+.center span{
+    width: 10%!important;
+    margin-right: 15px!important;
+}
+
+.center a {
+    width: auto;
+}
+
+.center img{
+    object-fit: cover!important;
+    object-position: center!important;
+    display: inline-block!important;
+}
+
+.deslogar{
+    background-color: var(--text-color)!important;   
+    border-radius: 10px!important;
+    float: right!important;
+    list-style: none!important;
+    padding: 0 20px!important;
+}
+
+.deslogar a{
+    float: right!important;
+    text-decoration: none!important;
+    color: var(--cor)!important;
+    border-bottom: 2px solid var(--text-color)!important;
+    padding: 1px!important;
+    font-size: var(--font-text-size)!important;
+    cursor: pointer !important;
+}
+
+/*Hover*/
+.navbar.hover .right a:hover{
+    border-bottom: 2px solid var(--text-color) !important;
+}
+/* Left */
+
+.left{
+    display: flex !important;
+    width: 35% !important;
+}
+
+.left img{
+    object-fit: contain !important;
+    cursor: pointer !important;
+    width: 70px !important;
+}
+
+.left a{
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+/* Main */
+
+main#main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .post{
+    text-align: center;
+    margin: 15px 10px;
+    border: 2.5px solid black;
+    border-radius: 12px;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.img>img{
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+main h3{
+    margin-top: 6px;
+    font-size: 41px;
+    font-weight: 600;
+}
+
+main p{
+    margin-top: 6px;
+    font-size: 21px;
+    font-weight: 100;
+    letter-spacing: 0.8px;
+}
+
+main a{
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 0.8px;  
+}
+
+/* Login */
+
+#login{
+    text-align: center;
+    overflow: hidden;
+}
+
+#login h2{
+    margin-top: 12%;
+    font-size: 40px;
+}
+
+form.form-login{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.login-input.primeira{
+    margin-top: 50px;
+}
+
+.login-input{
+    width: 100%;
+    height: 55px;
+    margin: 25px 0;
+    border-radius: 15px;
+    padding: 0 15px;
+    font-size: var(--font-text-size);
+}
+
+.cadastro{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Cadastro */
+
+#cadastro{
+    overflow: hidden;
+    text-align: center;
+}
+
+#cadastro h2{
+    margin-top: 9%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+form.form-cadastro{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.cadastro-input.primeira{
+    margin-top: 50px;
+}
+
+.cadastro-input{
+    width: 100%;
+    height: 55px;
+    margin: 25px 0;
+    border-radius: 15px;
+    padding: 0 15px;
+    font-size: var(--font-text-size);
+}
+
+.textarea{
+    padding-top: 10px;
+    height: 105px;
+}
+
+.cadastro-btn{
+    width: 100%;
+    height: 55px;
+    margin: 25px 0;
+    border-radius: 15px;
+    background-color: var(--cor);
+    color: var(--text-color);
+    font-size: var(--font-text-size);
+}
+
+/* Cadastrar evento */
+
+#cadastroPost{
+    overflow: hidden;
+}
+
+#cadastroPost h2{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 45px;
+}
+
+.btn{
+    background-color: var(--cor);
+    color: var(--text-color);
+}
+
+.file{
+    display: none;
+}
+
+label{
+    padding: 15px 15px;
+    cursor: pointer;
+    background-color: var(--cor);
+    color: var(--text-color);
+    border-radius: 20px;
+}
+
+/* Not available */
+
+#off{
+    text-align: center;
+}
+
+.nao{
+    padding: 60px;
+    letter-spacing: 1.3px;
+}
+
+/* Termos de uso */
+
+.termos li{
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* Subject */
+
+.subject{
+    display: flex;
+}
+
+.subject .center{
+    display: flex;
+}
+
+article.quests{
+    margin: 15px 10px;
+    border: 2.5px solid black;
+    border-radius: 12px;
+    width: 98%;
+    padding: 48px 18px;
+}
+
+article.quests>a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+}
+
+.Geografia{
+    background-color: purple;
+    color: #fff;
+}
+
+.História{
+    background-color: orange;
+    color: #fff;
+}
+
+.Biologia{
+    background-color: green;
+    color: #fff;
+}
+
+.Português{
+    background-color: red;
+    color: #fff;
+}
+
+.Matemática{
+    background-color: blue;
+    color: #fff;
+}
+
+/* Perguntas */
+
+form.perg{
+    display: inline-block;
+    width: 400px;
+    height:auto;
+    margin-top:20px;
+    margin-left: 30px;
+    border: 1px solid black;
+    padding:15px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+p#correction{
+    width: 400px;
+    height:auto;
+    margin-top:20px;
+    margin-left: 30px;
+    border: 1px solid black;
+    padding:15px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+/* User Info */
+
+.userInfo{
+    display: block;
+    
+}
+
+@media screen and (max-width:1010px){   
+    .navbar,
+    .navbar.hover{
+        height: auto !important;
+    }
+    
+    /* Left */
+    .left{
+        display: inline-block;
+        width: 100%;
+        float: none !important;
+        text-align: center !important;
+    }
+
+    .left img{
+        float: none !important;
+        margin: 15px 0;
+    }
+    
+    /* Deslogar */
+
+    .center span{
+        width: 100% !important;
+        padding: 0px 10px 10px 10px;
+    }
+
+    .deslogar{
+        width: 100%;
+        text-align: center !important;
+        padding: 10px;
+    }
+
+    .deslogar a{
+        float: none;
+        text-align: center !important;
+        border-bottom: none !important;
+    }
+
+    /* Right */
+    .right{
+        width: 100%;
+        display: inline-block;
+        text-align: center !important;
+        padding: 5px 10px;
+    }
+
+    .right li{
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px;
+    }
+
+    .right li:hover{
+        background-color: var(--text-color);
+        border-radius: 10px;
+    }
+
+    .right li a:hover{
+        color: var(--cor) !important;
+    }
+
+    .right li a{
+        width: 100% !important;
+        float: none;
+        text-align: center !important;
+    }
+
+    .right li.deslogar a{
+        border-bottom: none !important;
+    }
+
+    /* Form Login */
+    form.form-login{
+        width: 78% !important;
+    }
+
+    /* Login Cadastro */   
+    form.form-cadastro{
+       width: 78% !important; 
+    }
+}
+
+@media screen and (max-width:605px){
+    form.form-login{
+        width: 98% !important;
+    }
+
+    #login h2{
+        margin-top: 30%!important;
+    }
+   
+    form.form-cadastro{
+       width: 98% !important; 
+    }
+
+    #cadastroPost h2{
+        font-size: 35px !important;
+    }
+
+    .post.w100{
+        margin: 20px 0px;
+        border-radius: 0px;
+    }
+
+    .post.w100 .img img{
+        border-radius: 0px;
+    }
+
+    .post.w100 h3{
+        font-size: 34px !important
+    }
+
+    .post.w100 p{
+        font-size: 20px !important;
+        padding: 0px 0px 10px 0px !important;
+    }
+
+    .post.w100 a{
+        font-size: 16px;
+        word-break: break-all;
+    }
+}
